@@ -1,16 +1,31 @@
 #include <iostream>
 using namespace std;
 
-// main: generate some simple output
-
-int main()
-{
-    int num = 42;
-
-    cout << "The answer to the ultimate question of life,\n";
-    cout << "the universe and everything is (of course) ";
-    cout << num  << "." << endl;
-
-    return 0;
+int f(int a) {
+    int b = 0;
+    int c = 5;
+    int total = 0;
+    while (--c)
+        total += b;
+    return total - a;
 }
 
+int f(int a, int b) {
+    int c = 5;
+    int total = 0;
+    while (--c)
+        total += b;
+    return total - a;
+}
+
+int f(int a, int b, int c) {
+    int total = 0;
+    while (--c)
+        total += b;
+    return total - a;
+}
+
+int main() {
+    cout << f(3, 1, 2) << f(5, 2) << f(0) << endl;
+    return 0;
+}
