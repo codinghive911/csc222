@@ -1,31 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int f(int a) {
-    int b = 0;
-    int c = 5;
-    int total = 0;
-    while (--c)
-        total += b;
-    return total - a;
+int f() {
+    return 1;
 }
 
-int f(int a, int b) {
-    int c = 5;
-    int total = 0;
-    while (--c)
-        total += b;
-    return total - a;
+int f(int n) {
+    return n % 2 == 0 ? 1 : 0;
 }
 
-int f(int a, int b, int c) {
-    int total = 0;
-    while (--c)
-        total += b;
-    return total - a;
+int f(int n, int m) {
+    return n > m ? n - m : m - n;
 }
 
 int main() {
-    cout << f(3, 1, 2) << f(5, 2) << f(0) << endl;
+    cout << f() + f(11) + f(3, 4) << endl;
     return 0;
 }
