@@ -1,16 +1,19 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include <doctest.h>
+#include <iostream>
 using namespace std;
 
-double absolute_value(double x) {
-    if (x < 0) {
-        return -x;
-    }
-    return x;
+int f(int a, int b, int c) {
+    int total = 0;
+    while (--c)
+        total += b;
+    return total - a;
 }
 
-TEST_CASE("Test absolute_value") {
-    CHECK(absolute_value(4) == 4);
-    CHECK(absolute_value(-4) == 4);
-    CHECK(absolute_value(0) == 0);
+int f(double a, int b, char c) {
+    return int(a + b + c);
+}
+
+int main() {
+    char ch = 3;
+    cout << f(2, 3, 4) << f(3.0, 1, ch) << endl;
+    return 0;
 }
