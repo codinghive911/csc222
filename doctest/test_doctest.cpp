@@ -2,23 +2,18 @@
 #include <doctest.h>
 using namespace std;
 
-int count_digits(int n) {
-	if (n == 0) return 1;
-	if (n < 0) n = -n;
-	int count = 0;
+int sum_of_squares_to_n(int n) {
+	int total = 0;
 	while (n > 0) {
-		n/=10;
-		count++;
+		total += (n * n);
+		n--;
 	}
-	return count;
+	return total;
 }
 
-TEST_CASE("count_digits(int n) returns number of decimal digits in n") {
-    CHECK(count_digits(7) == 1);
-    CHECK(count_digits(73) == 2);
-    CHECK(count_digits(999) == 3);
-    CHECK(count_digits(0) == 1);
-    CHECK(count_digits(100000) == 6);
-    CHECK(count_digits(0xFF) == 3);
-    CHECK(count_digits(0123) == 2);
+TEST_CASE("sum_of_squares_to_n(int n) sums squares from 1 to n") {
+    CHECK(sum_of_squares_to_n(1) == 1);
+    CHECK(sum_of_squares_to_n(3) == 14);
+    CHECK(sum_of_squares_to_n(5) == 55);
+    CHECK(sum_of_squares_to_n(6) == 91);
 }
