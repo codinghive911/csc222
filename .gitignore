@@ -1,6 +1,14 @@
+# --- Compiled Binaries & Executables ---
 a.out
+*.exe
+my_program
+program
+
+# --- OS Specific Files ---
 .DS_Store
+Thumbs.db
+
+# --- Editor Backup & Swap Files ---
 *.swp
 *.save
 .*.sw?
-
