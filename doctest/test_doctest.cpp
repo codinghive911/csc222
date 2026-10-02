@@ -2,13 +2,18 @@
 #include <doctest.h>
 using namespace std;
 
-int find_largest(int n, int m) {
-	return (n > m) ? n : m;
+int sum_to_n(int n) {
+	int total = 0;
+	while (n > 0) {
+		total += n;
+		--n;
+	}
+	return total;
 }
 
-TEST_CASE("find_largest returns the greater of two integers") {
-    CHECK(find_largest(6, 19) == 19);
-    CHECK(find_largest(6, 1) == 6);
-    CHECK(find_largest(22, 42) == 42);
-    CHECK(find_largest(42, 42) == 42);
+TEST_CASE("sum_to_n(int n) returns sum of integers from 1 to n") {
+    CHECK(sum_to_n(3) == 6);
+    CHECK(sum_to_n(7) == 28);
+    CHECK(sum_to_n(1) == 1);
+    CHECK(sum_to_n(42) == 903);
 }
