@@ -1,19 +1,31 @@
 #include <iostream>
 using namespace std;
 
-struct student{
-	std::string name;
-	double gpa;
-	bool enrolled;
+struct Car{
+	std::string model;
+	int year;
+	std::string color;
+};
+
+void printCar(Car car) {
+        std::cout << car.model << '\n';
+        std::cout << car.year << '\n'; 
+        std::cout << car.color << '\n';
 };
 
 int main() {
-	student student1;
-	student1.name = "Hunter";
-	student1.gpa = 3.4;
-	student1.enrolled = true;
-	std::cout << student1.name << '\n';
-	std::cout << student1.gpa << '\n';
-	std::cout << student1.enrolled << '\n';
-	return 0;
-}
+
+	Car car1;
+	car1.model = "BMW i8";
+	car1.year = 2017;
+	car1.color = "White";
+
+	Car car2;
+	car2.model = "Mercedes-AMG GT 4";
+	car2.year = 2025;
+	car2.color = "Black";
+
+	printCar (car1);
+	printCar(car2);
+	return 0; 
+};
