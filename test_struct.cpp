@@ -1,30 +1,19 @@
 #include <iostream>
 using namespace std;
 
-struct A
-{
-    char a;
-    char b;
-};
-
-struct B
-{
-    char a;
-    double b;
-};
-
-struct C
-{
-    A a;
-    B b;
+struct student{
+	std::string name;
+	double gpa;
+	bool enrolled;
 };
 
 int main() {
-    A a = {'a', 'A'};
-    B b = {'B', 3.14};
-    C c = {{'c', 'C'}, {'d', 4.9}};
-    cout << "sizeof(a) is: " << sizeof(a) << endl;
-    cout << "sizeof(b) is: " << sizeof(b) << endl;
-    cout << "sizeof(c) is: " << sizeof(c) << endl;
-    return 0;
+	student student1;
+	student1.name = "Hunter";
+	student1.gpa = 3.4;
+	student1.enrolled = true;
+	std::cout << student1.name << '\n';
+	std::cout << student1.gpa << '\n';
+	std::cout << student1.enrolled << '\n';
+	return 0;
 }
