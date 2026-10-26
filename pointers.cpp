@@ -2,10 +2,9 @@
 using namespace std;
 
 int main() {
-    int a[6];
-    for (int i = 0; i < 6; i++)
-        a[i] = 2 * i + 4;
-    cout << a[4] / a[1] << endl;
-
+    int i = 0;
+    for (float f = .008; f < 1e2; f *= 1e1)
+        i++;
+    cout << i << endl;
     return 0;
 }
